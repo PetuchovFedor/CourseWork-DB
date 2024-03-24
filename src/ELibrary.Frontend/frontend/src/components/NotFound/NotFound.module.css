@@ -1,0 +1,32 @@
+.not_found_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 535px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.title {
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.label {
+    font-size: 18px;
+}
+
+.button {
+    width: 225px;
+    height: 35px;
+    /* background: rgba(0, 0, 255, 0.3); */
+    background: blue;
+    border-style: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}

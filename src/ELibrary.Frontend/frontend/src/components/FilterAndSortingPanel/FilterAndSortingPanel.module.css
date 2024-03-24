@@ -1,0 +1,20 @@
+.panel {
+    width: 100%;
+    height: 91px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.apply_button {
+    background: rgba(0, 0, 255, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: rgb(255, 228, 255);
+    width: 101px;
+    height: 28px;
+    cursor: pointer;
+}

@@ -1,0 +1,47 @@
+.genre_block {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.genre_name {
+    font-size: 25px;
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+
+.delete_button {
+    /* margin-top: 40px; 
+    margin-left: 15px; */
+    background: rgba(255, 0, 0, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    width: 139px;
+    margin-bottom: 10px;
+
+    height: 39px;
+    cursor: pointer;
+}
+
+.edit_button, .save_button {
+    width: 125px;
+    height: 35px;
+    /* background: rgba(0, 0, 255, 0.3); */
+    border-style: none;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background: blue;
+    cursor: pointer;
+}
+
+.save_button {
+    margin-bottom: 10px;
+}
+.input {
+    margin-bottom: 10px;
+    margin-top: 41px;
+    font-size: 13px;
+}

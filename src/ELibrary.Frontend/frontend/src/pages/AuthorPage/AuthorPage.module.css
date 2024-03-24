@@ -1,0 +1,95 @@
+.profile {
+    width: 90%;
+    margin: 40px;
+}
+
+.profile_header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.profile_header_icon {
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+}
+
+.profile_content {
+    width: 100%;
+    height: 500px;
+}
+
+.content_menu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.content_menu_button {
+    background: rgba(255, 255, 255, 1);
+    border-style: none;
+    /* border-radius: 10px; */
+    width: 100px;
+    color: black;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 5px;
+    /* cursor: pointer; */
+}
+
+.content_menu_button:hover {
+    color: rgba(0, 0, 255, 0.6);
+    /* border-bottom: 3px solid blue; */
+    cursor: pointer
+}
+
+.about {
+
+}
+
+.info {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border: 1px solid #00000018;;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.textarea_about {
+    border-style: none;
+    width: 100%;
+    font-size: 20px;
+    resize: none;
+    height: 300px;
+    padding: 10px;
+}
+
+.label_about {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+
+.button_delete {
+    margin-top: 40px; 
+    margin-left: 15px;
+    background: rgba(255, 0, 0, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: white;
+    width: 139px;
+    height: 39px;
+    cursor: pointer;
+}

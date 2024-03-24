@@ -1,0 +1,225 @@
+.profile
+{
+    width: 90%;
+    margin: 40px;
+}
+
+.profile_header {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.error {
+    color: red;
+}
+.profile_header_icon {
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+}
+
+.profile_settings {
+    background: rgba(0, 0, 255, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: rgb(255, 228, 255);
+    width: 100px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.profile_header_content {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile_content {
+    width: 100%;
+    height: 500px;
+    /* background-color: white; */
+}
+
+.content_menu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.content_menu_button {
+    background: rgba(255, 255, 255, 1);
+    border-style: none;
+    /* border-radius: 10px; */
+    width: 100px;
+    color: black;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 5px;
+    /* cursor: pointer; */
+}
+
+.content_menu_button:hover {
+    color: rgba(0, 0, 255, 0.6);
+    /* border-bottom: 3px solid blue; */
+    cursor: pointer
+}
+
+/* .content_menu_button:active {
+    color: rgba(0, 0, 255, 0.6);
+    border-bottom: none;
+    cursor: pointer
+} */
+
+.content_section {
+    /* background-color: #fff; */
+    width: 100%;
+    height: 400px;
+}
+
+.section_about {
+
+}
+
+.info {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border: 1px solid #00000018;;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.about_form {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid #00000018;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.label_about {
+    font-size: 20px;
+    margin-bottom: 10px
+}
+
+.about_no_edit {
+    width: 100%;
+    font-size: 20px;
+}
+
+.about_edit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.edit_icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    float: right;
+}
+
+.save_button {
+    background: rgba(0, 0, 255, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: rgb(255, 228, 255);
+    width: 100px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.exit_button {
+    border-style: none;
+    background-color: #fff;
+    color: rgba(0,0,255,1);
+    cursor: pointer;
+}
+
+.textarea_about {
+    border-style: none;
+    width: 100%;
+    font-size: 20px;
+    resize: none;
+    height: 300px
+    /* margin-bottom: 10px; */
+    /* min-height: "6vh"; */
+    /* height: "unset"; */
+}
+
+.section_books {
+
+}
+
+.section_setting {
+
+}
+
+.settings_form, .setting__change_name_email {
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.settings_label {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.settings_input {
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.add_book_button,
+.settings_button {
+    background: rgba(0, 0, 255, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: rgb(255, 228, 255);
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.add_book_button {
+    width: 150px;
+}
+
+.settings_form {
+    margin-bottom: 30px
+}
+
+.button_delete {
+    margin-top: 40px;
+    margin-left: 15px;
+    background: rgba(255, 0, 0, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: rgba(255, 228, 255, 0.9);
+    /* width: 100px; */
+    height: 35px;
+    cursor: pointer;
+}

@@ -1,0 +1,40 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 80%;
+    /* height: 500px; */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.add_comment_block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.label {
+    font-size: 22px;
+    margin-top: 0px;
+}
+
+.textarea {
+    margin-bottom: 27px;
+    height: 53px;
+    font-size: 15px;
+}
+
+.button { 
+    background: rgba(0, 0, 255, 1);
+    border-style: none;
+    border-radius: 10px;
+    color: rgb(255, 228, 255);
+    margin-right: 10px;
+    height: 30px;
+    cursor: pointer;
+    width: 100px;
+}
