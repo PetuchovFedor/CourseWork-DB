@@ -19,17 +19,11 @@ import {
   Route,
 } from 'react-router-dom';
 import { Header } from './components/Header/Header';
-import { GenrePage } from './pages/GenrePage/GenrePage';
 import { GenreRouting } from './routing/GenreRouting';
 import { UserRouting } from './routing/UserRouting';
 import { BookRouting } from './routing/BookRouting';
 import { useAuth } from './hook/useAuth';
 import { SearchPage } from './pages/SearchPage/SearchPage';
-
-const ann:string = `В typescript мы будем определять многострочные строки с помощью шаблонных литералов. 
-Шаблонный литерал - это не что иное, как строка, которая определяется обратными метками (“) вместо двойных и одинарных кавычек.
-Здесь вы можете увидеть пример определения многострочной строки с использованием литералов шаблонов. 
-Напишите приведенный ниже код в файле MultiLineString.ts.`
 
 function App() {
   return (

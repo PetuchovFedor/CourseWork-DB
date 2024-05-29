@@ -43,11 +43,11 @@ namespace ELibrary.src.ELibrary.Infrastructure.Data.UserModel
         public async Task Delete(User user)
         {
             var userBooks = await _dbContext.WrittenBook
-                .Where(x => x.UserId == user.Id).Select(x => x.IdBookNavigation)
+                .Where(x => x.UserId == user.Id)
+                .Select(x => x.IdBookNavigation)
                 .ToListAsync();
             _dbContext.Book.RemoveRange(userBooks);
-            _dbContext.User.Remove(user);
-            //throw new NotImplementedException();
+            _dbContext.User.Remove(user);            
         }
 
         public async Task<RefreshToken> GetRefreshToken(int userId)

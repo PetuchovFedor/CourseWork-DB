@@ -24,12 +24,10 @@ namespace ELibrary.src.ELibrary.Infrastructure.Data.BookModel
             var authors = new List<User>();
             foreach (string name in authorsNames)
             {
-                 authors.Add(await _dbContext.User
-                     .SingleOrDefaultAsync(u => u.Name == name));
-                    //.Where(u => u.Name == name)) ;
-                    //.Select(u => u.Id));
+                var user = await _dbContext.User
+                     .SingleOrDefaultAsync(u => u.Name == name);
+                authors.Add(user!);
             }
-            //var authorsIds = _dbContext.User.Where(u => u.Name == )
             var entity = await _dbContext.Book.AddAsync(book);
             await _dbContext.SaveChangesAsync();
             await _dbContext.WrittenBook.AddRangeAsync(authors
@@ -97,25 +95,15 @@ namespace ELibrary.src.ELibrary.Infrastructure.Data.BookModel
             }
             if (genresIds.Length != 0)
             {
-                // Отфильтровать список книг по массиву идентификаторов жанров
                 books = books.Where(book =>
                     genresIds.All(genreId =>
-                        _dbContext.BooksGenres.Any(bg => bg.BookId == book.Id && bg.GenreId == genreId)
+                        _dbContext.BooksGenres.Any(bg => bg.BookId == book.Id
+                        && bg.GenreId == genreId)
                     )
                 ).ToList();
-                //books = books.Where(b => _dbContext.BooksGenres
-                //.Any(bg => bg.BookId == b.Id && genresIds.Contains(bg.GenreId))).ToList();
             }          
-            //.Skip(scipped).Take(50).ToList();
             int totalNumber = books.Count;
             books = books.Skip(scipped).Take(15).ToList();
-            //var books = await _dbContext.BooksGenres
-            //    //.Include(b => b.IdBookNavigation)
-            //    .Where(b => genresIds.Contains(b.GenreId))
-            //    .Select(b => b.IdBookNavigation)
-            //    .Skip(scipped).Take(50)
-            //    .ToListAsync();
-            //var books = _dbContext.B;
 
             var result = new List<Book>();
             switch (sortingType)

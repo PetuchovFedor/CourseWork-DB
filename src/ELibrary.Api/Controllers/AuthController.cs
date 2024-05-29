@@ -1,5 +1,4 @@
 ﻿using ELibrary.src.ELibrary.Api.Dto;
-//using ELibrary.src.ELibrary.Api.Services.AuthService;
 using ELibrary.src.ELibrary.Api.Services.ImageService;
 using ELibrary.src.ELibrary.Api.Services.TokenService;
 using ELibrary.src.ELibrary.Domain.RefreshTokenModel;
@@ -97,23 +96,12 @@ namespace ELibrary.src.ELibrary.Api.Controllers
                 _unitOfWork.Commit();
                 string role = user.RoleId - 1 == 0 ? "client" : "admin";
                 var identity = GetIdentity(user.Id, user.Name, user.Email, role);
-                var claimsPrincipal = new ClaimsPrincipal(identity);
-                //await HttpContext.SignInAsync(claimsPrincipal);
-                //var claims = new List<Claim>
-                //{
-                //    new Claim("Id", user.Id.ToString()),
-                //    new Claim(ClaimTypes.Name, user.Name),
-                //    new Claim("Email", user.Email),
-                //    new Claim(ClaimTypes.Role, role)
-                //};
+               // var claimsPrincipal = new ClaimsPrincipal(identity);
                 var accessToken = _tokenService.GenerateAccessToken(identity.Claims);
                 var refreshToken = _tokenService.GenerateRefreshToken();
                 RefreshToken token = new RefreshToken(user.Id, refreshToken, DateTime.Now,
                     DateTime.Now.AddDays(7));
                 await _authRepository.Registration(token);
-                var allClaims = HttpContext.User.Claims.Select(c => $"{c.Type}: {c.Value}");
-                Console.WriteLine("All Claims: " + string.Join(", ", allClaims));
-                //await _authRepository.UpdateRefreshToken(token);
                 _unitOfWork.Commit();
                 return Ok(new AuthResponseDto(accessToken, refreshToken));
             }

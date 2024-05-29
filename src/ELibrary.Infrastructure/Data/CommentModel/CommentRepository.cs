@@ -35,7 +35,6 @@ namespace ELibrary.src.ELibrary.Infrastructure.Data.CommentModel
         {
             return await _dbContext.Comment
                 .Where(c => c.BookId == bookId).CountAsync();
-            //throw new NotImplementedException();
         }
 
         public async Task<List<Comment>> GetPartByBookId(int bookId, int scipped)
@@ -43,8 +42,7 @@ namespace ELibrary.src.ELibrary.Infrastructure.Data.CommentModel
             return await _dbContext.Comment.Include(c => c.IdBookNavigation)
                 .Include(c => c.IdUserNavigation)
                 .Where(c => c.BookId == bookId)
-                .Skip(scipped).Take(10).ToListAsync();
-            //throw new NotImplementedException();
+                .Skip(scipped).Take(10).ToListAsync();            
         }
 
         public async Task<List<User>> GetUsersByBookId(int bookId)
